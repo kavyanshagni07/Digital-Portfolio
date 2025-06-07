@@ -499,30 +499,43 @@ wp.i18n.setLocaleData( { 'text directionltr': [ 'ltr' ] } );
 		<div class="elementor-element elementor-element-d0c2e97 e-con-full e-flex e-con e-child" data-id="d0c2e97" data-element_type="container">
 				<div class="elementor-element elementor-element-6486ff3 elementor-widget elementor-widget-wpforms" data-id="6486ff3" data-element_type="widget" data-widget_type="wpforms.default">
 				<div class="elementor-widget-container">
-					<div class="wpforms-container " id="wpforms-9"><form id="wpforms-form-9" class="wpforms-validate wpforms-form" data-formid="9" method="post" enctype="multipart/form-data" action="/wordpress/contact/?simply_static_page=93229" data-token="a61f8ec436a954a13a0104d20a25ef48" data-token-time="1749297436">
-<noscript class="wpforms-error-noscript">Please enable JavaScript in your browser to complete this form.</noscript>
-<div class="wpforms-field-container">
-<div id="wpforms-9-field_0-container" class="wpforms-field wpforms-field-name" data-field-id="0">
-<label class="wpforms-field-label">Name <span class="wpforms-required-label">*</span></label><div class="wpforms-field-row wpforms-field-large">
-<div class="wpforms-field-row-block wpforms-first wpforms-one-half">
-<input type="text" id="wpforms-9-field_0" class="wpforms-field-name-first wpforms-field-required" name="wpforms[fields][0][first]" required><label for="wpforms-9-field_0" class="wpforms-field-sublabel after">First</label>
-</div>
-<div class="wpforms-field-row-block wpforms-one-half">
-<input type="text" id="wpforms-9-field_0-last" class="wpforms-field-name-last wpforms-field-required" name="wpforms[fields][0][last]" required><label for="wpforms-9-field_0-last" class="wpforms-field-sublabel after">Last</label>
-</div>
-</div>
-</div>
-<div id="wpforms-9-field_1-container" class="wpforms-field wpforms-field-email" data-field-id="1">
-<label class="wpforms-field-label" for="wpforms-9-field_1">Email <span class="wpforms-required-label">*</span></label><input type="email" id="wpforms-9-field_1" class="wpforms-field-large wpforms-field-required" name="wpforms[fields][1]" spellcheck="false" required>
-</div>
-<div id="wpforms-9-field_2-container" class="wpforms-field wpforms-field-textarea" data-field-id="2">
-<label class="wpforms-field-label" for="wpforms-9-field_2">Message <span class="wpforms-required-label">*</span></label><textarea id="wpforms-9-field_2" class="wpforms-field-medium wpforms-field-required" name="wpforms[fields][2]" required></textarea>
-</div>
-</div>
-<!-- .wpforms-field-container --><div class="wpforms-submit-container">
-<input type="hidden" name="wpforms[id]" value="9"><input type="hidden" name="page_title" value="Contact"><input type="hidden" name="page_url" value="https://kavyanshagni07.github.io/Digital-Portfolio/contact/?simply_static_page=93229"><input type="hidden" name="url_referer" value=""><input type="hidden" name="page_id" value="16"><input type="hidden" name="wpforms[post_id]" value="16"><button type="submit" name="wpforms[submit]" id="wpforms-submit-9" class="wpforms-submit" data-alt-text="Sending..." data-submit-text="Submit" aria-live="assertive" value="wpforms-submit">Submit</button>
-</div>
-</form></div>  <!-- .wpforms-container -->				</div>
+					<div class="wpforms-container " id="wpforms-9"><!-- Contact Form Styled Like the Image -->
+<form
+  action="https://formspree.io/f/xnnvjrda"
+  method="POST"
+  style="max-width: 700px; margin: auto; padding: 20px; background-color: #0f1a25; color: white; font-family: sans-serif;"
+>
+  <div style="display: flex; flex-direction: column; gap: 20px;">
+    <!-- Name Section -->
+    <label style="font-weight: bold;">Name <span style="color: red;">*</span></label>
+    <div style="display: flex; gap: 10px;">
+      <div style="flex: 1;">
+        <input type="text" name="first_name" required placeholder="First"
+          style="width: 100%; padding: 10px; border-radius: 4px; border: 1px solid #ccc; background-color: #16202b; color: white;">
+      </div>
+      <div style="flex: 1;">
+        <input type="text" name="last_name" required placeholder="Last"
+          style="width: 100%; padding: 10px; border-radius: 4px; border: 1px solid #ccc; background-color: #16202b; color: white;">
+      </div>
+    </div>
+
+    <!-- Email -->
+    <label for="email" style="font-weight: bold;">Email <span style="color: red;">*</span></label>
+    <input type="email" name="email" id="email" required placeholder="you@example.com"
+      style="width: 100%; padding: 10px; border-radius: 4px; border: 1px solid #ccc; background-color: #16202b; color: white;">
+
+    <!-- Message -->
+    <label for="message" style="font-weight: bold;">Message <span style="color: red;">*</span></label>
+    <textarea name="message" id="message" rows="5" required placeholder="Type your message here..."
+      style="width: 100%; padding: 10px; border-radius: 4px; border: 1px solid #ccc; background-color: #16202b; color: white;"></textarea>
+
+    <!-- Submit Button -->
+    <button type="submit"
+      style="align-self: flex-start; padding: 10px 20px; background-color: transparent; color: #2196f3; border: none; font-weight: bold; text-transform: uppercase; cursor: pointer;">
+      Submit
+    </button>
+  </div>
+</form>				</div>
 				</div>
 				</div>
 					</div>
