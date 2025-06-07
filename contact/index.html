@@ -499,43 +499,66 @@ wp.i18n.setLocaleData( { 'text directionltr': [ 'ltr' ] } );
 		<div class="elementor-element elementor-element-d0c2e97 e-con-full e-flex e-con e-child" data-id="d0c2e97" data-element_type="container">
 				<div class="elementor-element elementor-element-6486ff3 elementor-widget elementor-widget-wpforms" data-id="6486ff3" data-element_type="widget" data-widget_type="wpforms.default">
 				<div class="elementor-widget-container">
-					<div class="wpforms-container " id="wpforms-9"><!-- Contact Form Styled Like the Image -->
-<form
+					<div class="wpforms-container " id="wpforms-9"><!-- Contact Form with On-Page Thank You Message -->
+<form id="contact-form"
   action="https://formspree.io/f/xnnvjrda"
   method="POST"
-  style="max-width: 700px; margin: auto; padding: 20px; background-color: #0f1a25; color: white; font-family: sans-serif;"
+  style="max-width: 700px; margin: auto; font-family: sans-serif; color: white;"
 >
   <div style="display: flex; flex-direction: column; gap: 20px;">
-    <!-- Name Section -->
-    <label style="font-weight: bold;">Name <span style="color: red;">*</span></label>
+    <label>Name <span style="color: red;">*</span></label>
     <div style="display: flex; gap: 10px;">
-      <div style="flex: 1;">
-        <input type="text" name="first_name" required placeholder="First"
-          style="width: 100%; padding: 10px; border-radius: 4px; border: 1px solid #ccc; background-color: #16202b; color: white;">
-      </div>
-      <div style="flex: 1;">
-        <input type="text" name="last_name" required placeholder="Last"
-          style="width: 100%; padding: 10px; border-radius: 4px; border: 1px solid #ccc; background-color: #16202b; color: white;">
-      </div>
+      <input type="text" name="first_name" required placeholder="First"
+        style="flex: 1; background-color: transparent; color: white; padding: 10px; border: 1px solid white; border-radius: 4px;">
+      <input type="text" name="last_name" required placeholder="Last"
+        style="flex: 1; background-color: transparent; color: white; padding: 10px; border: 1px solid white; border-radius: 4px;">
     </div>
 
-    <!-- Email -->
-    <label for="email" style="font-weight: bold;">Email <span style="color: red;">*</span></label>
-    <input type="email" name="email" id="email" required placeholder="you@example.com"
-      style="width: 100%; padding: 10px; border-radius: 4px; border: 1px solid #ccc; background-color: #16202b; color: white;">
+    <label>Email <span style="color: red;">*</span></label>
+    <input type="email" name="email" required placeholder="you@example.com"
+      style="width: 100%; background-color: transparent; color: white; padding: 10px; border: 1px solid white; border-radius: 4px;">
 
-    <!-- Message -->
-    <label for="message" style="font-weight: bold;">Message <span style="color: red;">*</span></label>
-    <textarea name="message" id="message" rows="5" required placeholder="Type your message here..."
-      style="width: 100%; padding: 10px; border-radius: 4px; border: 1px solid #ccc; background-color: #16202b; color: white;"></textarea>
+    <label>Message <span style="color: red;">*</span></label>
+    <textarea name="message" rows="5" required placeholder="Type your message here..."
+      style="width: 100%; background-color: transparent; color: white; padding: 10px; border: 1px solid white; border-radius: 4px;"></textarea>
 
-    <!-- Submit Button -->
     <button type="submit"
-      style="align-self: flex-start; padding: 10px 20px; background-color: transparent; color: #2196f3; border: none; font-weight: bold; text-transform: uppercase; cursor: pointer;">
+      style="padding: 10px 20px; background: none; color: #2196f3; border: none; font-weight: bold; text-transform: uppercase; cursor: pointer;">
       Submit
     </button>
   </div>
-</form>				</div>
+</form>
+
+<!-- Thank you message -->
+<p id="thank-you-message" style="color: #2196f3; text-align: center; margin-top: 20px; display: none; font-size: 18px;">
+  <strong>Thanks!</strong> Your message has been sent successfully.
+</p>
+
+<!-- JavaScript for AJAX form handling -->
+<script>
+  const form = document.getElementById("contact-form");
+  const thankYouMessage = document.getElementById("thank-you-message");
+
+  form.addEventListener("submit", async function(event) {
+    event.preventDefault();
+    const formData = new FormData(form);
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+
+    if (response.ok) {
+      form.reset();
+      thankYouMessage.style.display = "block";
+    } else {
+      alert("Oops! There was a problem submitting your form.");
+    }
+  });
+</script>
+				</div>
 				</div>
 				</div>
 					</div>
