@@ -1,6 +1,25 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
+<!-- Contact Form using Formspree -->
+<form
+  action="https://formspree.io/f/xnnvjrda"
+  method="POST"
+  style="max-width: 500px; margin: auto; display: flex; flex-direction: column; gap: 15px;"
+>
+  <label for="name">Your Name:</label>
+  <input type="text" name="name" id="name" required placeholder="Enter your name" style="padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+
+  <label for="email">Your Email:</label>
+  <input type="email" name="email" id="email" required placeholder="you@example.com" style="padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+
+  <label for="message">Your Message:</label>
+  <textarea name="message" id="message" rows="5" required placeholder="Type your message here..." style="padding: 10px; border-radius: 5px; border: 1px solid #ccc;"></textarea>
+
+  <button type="submit" style="padding: 12px; background-color: #0085FF; color: white; border: none; border-radius: 5px; cursor: pointer;">
+    Send Message
+  </button>
+</form>
 <style>
   body {
     zoom: 60%;
