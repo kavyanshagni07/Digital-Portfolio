@@ -1,12 +1,42 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
+
 <style>
   body {
     zoom: 60%;
-    transform-origin: top left
+    transform-origin: top left;
+  }
+
+  @media (max-width: 768px) {
+    html {
+      transform: scale(0.6);
+      transform-origin: top left;
+      width: 166.66vw;
+      overflow-x: hidden;
+    }
+
+    * {
+      max-width: 100% !important;
+      box-sizing: border-box;
+    }
+
+    .container, .entry-content, form, section {
+      padding: 1rem !important;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    input, textarea {
+      width: 100% !important;
+    }
   }
 </style>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11"> 
