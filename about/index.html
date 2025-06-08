@@ -9,11 +9,13 @@
   }
 
   @media (max-width: 768px) {
-    html {
-      transform: scale(0.6);
-      transform-origin: top left;
-      width: 166.66vw;
-      overflow-x: hidden;
+    html, body {
+      position: fixed;
+      overflow: hidden;
+      overscroll-behavior: none;
+      max-width: 100vw;
+      max-height: 100vh;
+      touch-action: none;
     }
 
     * {
