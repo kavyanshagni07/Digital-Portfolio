@@ -10,12 +10,9 @@
 
   @media (max-width: 768px) {
     html, body {
-      position: fixed;
-      overflow: hidden;
-      overscroll-behavior: none;
+      overflow-x: hidden;
       max-width: 100vw;
-      max-height: 100vh;
-      touch-action: none;
+      overscroll-behavior-x: none;
     }
 
     * {
@@ -25,7 +22,6 @@
 
     .container, .entry-content, form, section {
       padding: 1rem !important;
-      overflow-x: hidden;
     }
 
     img {
